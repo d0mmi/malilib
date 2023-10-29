@@ -14,6 +14,7 @@ import net.minecraft.nbt.NbtIo;
 import net.minecraft.nbt.NbtTagSizeTracker;
 
 import fi.dy.masa.malilib.MaLiLib;
+import net.minecraft.nbt.NbtTagSizeTracker;
 
 public class FileUtils
 {
