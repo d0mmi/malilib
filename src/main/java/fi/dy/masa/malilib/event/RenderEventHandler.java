@@ -95,7 +95,7 @@ public class RenderEventHandler implements IRenderDispatcher
     /**
      * NOT PUBLIC API - DO NOT CALL
      */
-    public void onRenderWorldLast(MatrixStack matrixStack, Matrix4f projMatrix, MinecraftClient mc)
+    public void onRenderWorldLast(Matrix4f positionMatrix, Matrix4f projMatrix, MinecraftClient mc)
     {
         if (this.worldLastRenderers.isEmpty() == false)
         {
@@ -111,7 +111,7 @@ public class RenderEventHandler implements IRenderDispatcher
             for (IRenderer renderer : this.worldLastRenderers)
             {
                 mc.getProfiler().push(renderer.getProfilerSectionSupplier());
-                renderer.onRenderWorldLast(matrixStack, projMatrix);
+                renderer.onRenderWorldLast(positionMatrix, projMatrix);
                 mc.getProfiler().pop();
             }
 
