@@ -15,6 +15,7 @@ import fi.dy.masa.malilib.gui.wrappers.TextFieldWrapper;
 import fi.dy.masa.malilib.interfaces.IStringRetriever;
 import fi.dy.masa.malilib.render.RenderUtils;
 import fi.dy.masa.malilib.util.GuiUtils;
+import org.joml.Matrix4fStack;
 
 /**
  * A dropdown selection widget for entries in the given list.
@@ -259,8 +260,8 @@ public class WidgetDropDownList<T> extends WidgetBase
     {
         RenderUtils.color(1f, 1f, 1f, 1f);
 
-        MatrixStack matrixStack = RenderSystem.getModelViewStack();
-        matrixStack.push();
+        Matrix4fStack matrixStack = RenderSystem.getModelViewStack();
+        matrixStack.pushMatrix();
         matrixStack.translate(0, 0, 10);
         MatrixStack matrixStackIn = drawContext.getMatrices();
         matrixStackIn.push();
@@ -331,7 +332,7 @@ public class WidgetDropDownList<T> extends WidgetBase
             RenderUtils.drawTexturedRect(this.x + this.width - 16, this.y + 2, i.getU() + i.getWidth(), i.getV(), i.getWidth(), i.getHeight());
         }
 
-        matrixStack.pop();
+        matrixStack.popMatrix();
         matrixStackIn.pop();
     }
 

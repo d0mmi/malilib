@@ -11,10 +11,9 @@ import com.google.common.collect.ImmutableSet;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtIo;
-import net.minecraft.nbt.NbtTagSizeTracker;
+import net.minecraft.nbt.NbtSizeTracker;
 
 import fi.dy.masa.malilib.MaLiLib;
-import net.minecraft.nbt.NbtTagSizeTracker;
 
 public class FileUtils
 {
@@ -145,7 +144,7 @@ public class FileUtils
             try
             {
                 FileInputStream is = new FileInputStream(file);
-                NbtCompound nbt = NbtIo.readCompressed(is, NbtTagSizeTracker.ofUnlimitedBytes());
+                NbtCompound nbt = NbtIo.readCompressed(is, NbtSizeTracker.ofUnlimitedBytes());
                 is.close();
                 return nbt;
             }
