@@ -23,7 +23,7 @@ public class ClientPacketChannelHandler implements IClientPacketChannelHandler
     @Override
     public void registerClientChannelHandler(IPluginChannelHandler handler)
     {
-        Identifier channel = handler.getChannel();
+        /*Identifier channel = handler.getChannel();
 
         if (this.handlers.containsEntry(channel, handler) == false)
         {
@@ -33,17 +33,17 @@ public class ClientPacketChannelHandler implements IClientPacketChannelHandler
             {
                 ClientPlayNetworking.registerGlobalReceiver(channel, handler.getClientPacketHandler());
             }
-        }
+        }*/
     }
 
     @Override
     public void unregisterClientChannelHandler(IPluginChannelHandler handler)
     {
-        Identifier channel = handler.getChannel();
+        /*Identifier channel = handler.getChannel();
 
         if (this.handlers.remove(channel, handler) && handler.registerToServer())
         {
             ClientPlayNetworking.unregisterGlobalReceiver(channel);
-        }
+        }*/
     }
 }

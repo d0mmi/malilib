@@ -63,7 +63,7 @@ public class PacketSplitter
 
             buf.writeBytes(packet, thisLen);
 
-            ClientPlayNetworking.send(channel, buf);
+            //ClientPlayNetworking.send(channel, buf);
         }
 
         packet.release();

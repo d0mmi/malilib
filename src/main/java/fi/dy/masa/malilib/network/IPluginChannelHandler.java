@@ -1,6 +1,6 @@
 package fi.dy.masa.malilib.network;
 
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.PlayChannelHandler;
+//import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.PlayChannelHandler;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.network.PacketByteBuf;
@@ -8,7 +8,7 @@ import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.util.Identifier;
 
 public interface IPluginChannelHandler
-{
+{/*
     Identifier getChannel();
 
     default PlayChannelHandler getClientPacketHandler()
@@ -41,5 +41,5 @@ public interface IPluginChannelHandler
     default boolean registerToServer()
     {
         return true;
-    }
+    }*/
 }
